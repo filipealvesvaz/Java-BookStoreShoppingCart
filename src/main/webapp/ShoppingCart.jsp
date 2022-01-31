@@ -36,7 +36,7 @@
                         <td> ${ cartItem.getTitle() } </td>
                         <td> ${ cartItem.getAuthor() } </td>
                         <td> <fmt:formatNumber value = "${ cartItem.getPrice() }" type = "currency"/>  </td>
-                        <td>${ cartItem.getQuantity() }</td>
+                        <td> <input type="number" name="quantity" min="1" max="50" value="${ cartItem.getQuantity() }" />   </td>
                         <td> <fmt:formatNumber value = "${ cartItem.getTotalCost() }" type = "currency"/> </td>
                         <td>Update Delete</td>
                     </form>
