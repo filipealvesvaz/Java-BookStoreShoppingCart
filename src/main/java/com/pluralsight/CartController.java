@@ -47,7 +47,7 @@ public class CartController extends HttpServlet {
                     addToCart(request, response);
                     break;
                 case "/delete":
-                    deleteFromCart();
+                    deleteFromCart(request, response);
                     break;
                 default:
                     break;
@@ -91,7 +91,8 @@ public class CartController extends HttpServlet {
         doGet(request, response);
     }
 
-    private void deleteFromCart() throws ServletException, IOException{
+    private void deleteFromCart(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        HttpSession session = request.getSession();
 
     }
 }
